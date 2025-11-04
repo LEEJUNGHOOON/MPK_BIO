@@ -1,0 +1,249 @@
+/* 기본 리셋 비슷하게 */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  background: #fff;
+  color: #111;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 공통 컨테이너 */
+.container {
+  width: min(1200px, 100%);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* 헤더 */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid #e5e7eb;
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 56px;
+}
+.logo {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.nav {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+.nav a:hover {
+  color: #111827;
+}
+
+/* 히어로 */
+.hero {
+  background: linear-gradient(to bottom, #f3f4f6, #fff);
+  padding: 4rem 0 4.5rem;
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+.badge {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #2563eb;
+  margin-bottom: 0.8rem;
+}
+.title {
+  font-size: clamp(2.1rem, 4vw, 2.7rem);
+  font-weight: 700;
+  line-height: 1.1;
+  color: #0f172a;
+}
+.subtitle {
+  margin-top: 1.2rem;
+  color: #4b5563;
+  line-height: 1.6;
+  max-width: 36rem;
+}
+.hero-buttons {
+  margin-top: 1.8rem;
+  display: flex;
+  gap: 0.8rem;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem 1.6rem;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+.btn.primary {
+  background: #2563eb;
+  color: #fff;
+}
+.btn.primary:hover {
+  background: #1d4ed8;
+}
+.btn.secondary {
+  background: #fff;
+  color: #374151;
+  border-color: #d1d5db;
+}
+.btn.secondary:hover {
+  background: #f3f4f6;
+}
+
+/* 히어로 오른쪽 카드 */
+.hero-right .card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.05);
+}
+.hero-right .card h2 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+.hero-right .card ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.hero-right .card li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  font-size: 0.85rem;
+  border-bottom: 1px solid #f3f4f6;
+}
+.hero-right .card li:last-child {
+  border-bottom: none;
+}
+.muted {
+  color: #9ca3af;
+}
+
+/* 공통 섹션 */
+.section {
+  padding: 4rem 0;
+}
+.section-gray {
+  background: #f9fafb;
+}
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.section-text {
+  max-width: 42rem;
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+/* 문의 영역 */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 2.5rem;
+}
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 1.5rem;
+}
+.contact-list li {
+  font-size: 0.9rem;
+  margin-bottom: 0.4rem;
+}
+.form {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.8rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.form input,
+.form textarea {
+  width: 100%;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  padding: 0.55rem 0.7rem;
+  font-size: 0.85rem;
+  font-family: inherit;
+}
+.form input:focus,
+.form textarea:focus {
+  outline: 2px solid #bfdbfe;
+  border-color: #93c5fd;
+}
+.form button {
+  background: #2563eb;
+  border: none;
+  color: #fff;
+  border-radius: 0.5rem;
+  padding: 0.6rem 0;
+  font-weight: 500;
+  cursor: pointer;
+}
+.form button:hover {
+  background: #1d4ed8;
+}
+
+/* 푸터 */
+.footer {
+  border-top: 1px solid #e5e7eb;
+  padding: 1.5rem 0;
+  text-align: center;
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
+
+/* 반응형 */
+@media (max-width: 992px) {
+  .hero-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  .nav {
+    display: none;
+  }
+  .hero-right {
+    order: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 3rem 0;
+  }
+  .hero-buttons {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .section {
+    padding: 3rem 0;
+  }
+}
