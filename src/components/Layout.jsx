@@ -66,12 +66,11 @@ export default function Layout({ children }) {
           <div className="space-y-4">
             <div className="text-xl font-bold">회사명 : MPK BIOSOLUTION</div>
             <div className="text-sm text-gray-300">
-              주소 : 경기도 광주시 행정타운로138번길 26, 1층(회덕동) (주)MPK
-              BioSolution
+              주소 : 경기도 성남시 분당구 탄천상로 164 (주)MPK BioSolution
             </div>
             <div className="text-sm text-gray-300">대표자 : 문효원</div>
             <div className="text-sm text-gray-300">
-              TEL : 02-449-7401~2 사업자등록번호 : 602-81-69712
+              FAX : 031-717-9545 사업자등록번호 : 602-81-69712
             </div>
             <div className="text-xs text-gray-400 pt-4 border-t border-gray-700">
               Copyright© 2021. All Reserved MPK BioSolution Co., Ltd.
