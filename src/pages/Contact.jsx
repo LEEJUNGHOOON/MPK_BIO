@@ -1,45 +1,14 @@
 // src/pages/Contact.jsx
-import { useEffect } from "react";
+import {
+  Map,
+  MapMarker,
+  CustomOverlayMap,
+  ZoomControl,
+  MapTypeControl,
+} from "react-kakao-maps-sdk";
 
 export default function Contact() {
-  useEffect(() => {
-    // 카카오맵 API 스크립트 로드
-    const script = document.createElement("script");
-    script.src =
-      "//dapi.kakao.com/v2/maps/sdk.js?appkey=YOUR_APP_KEY_HERE&autoload=false";
-    script.async = true;
-    document.head.appendChild(script);
-
-    script.onload = () => {
-      window.kakao.maps.load(() => {
-        const container = document.getElementById("kakao-map");
-        const options = {
-          center: new window.kakao.maps.LatLng(37.5048, 127.1086), // 송파구 좌표
-          level: 3,
-        };
-
-        const map = new window.kakao.maps.Map(container, options);
-
-        // 마커 표시
-        const markerPosition = new window.kakao.maps.LatLng(37.5048, 127.1086);
-        const marker = new window.kakao.maps.Marker({
-          position: markerPosition,
-        });
-        marker.setMap(map);
-
-        // 인포윈도우 표시
-        const infowindow = new window.kakao.maps.InfoWindow({
-          content:
-            '<div style="padding:5px;font-size:12px;">휴먼스헬스케어</div>',
-        });
-        infowindow.open(map, marker);
-      });
-    };
-
-    return () => {
-      document.head.removeChild(script);
-    };
-  }, []);
+  const center = { lat: 37.3444366, lng: 127.1054167 };
 
   return (
     <div className="w-full py-20">
@@ -353,10 +322,40 @@ export default function Contact() {
               <h3 className="text-2xl font-bold text-gray-900 mb-4">
                 오시는 길
               </h3>
-              <div
-                id="kakao-map"
-                className="w-full h-96 rounded-2xl shadow-lg border"
-              ></div>
+              <div className="rounded-2xl shadow-lg overflow-hidden border relative">
+                <Map
+                  center={center}
+                  style={{ width: "100%", height: "400px" }}
+                  level={4}
+                >
+                  {/* 핀 */}
+                  <MapMarker position={center} />
+
+                  {/* 라벨: 마커 중앙 기준 정확히 가운데 정렬 */}
+                  <CustomOverlayMap
+                    position={center}
+                    xAnchor={0.5}
+                    yAnchor={1.6}
+                  >
+                    <div className="px-3 py-1.5 rounded-full bg-white/95 shadow ring-1 ring-black/5 text-sm font-medium text-gray-900 text-center">
+                      MPK BIOSOLUTION
+                    </div>
+                  </CustomOverlayMap>
+
+                  {/* 줌/맵타입 컨트롤 */}
+                  {typeof window !== "undefined" && window.kakao && (
+                    <>
+                      <ZoomControl
+                        position={window.kakao.maps.ControlPosition.RIGHT}
+                      />
+                      <MapTypeControl
+                        position={window.kakao.maps.ControlPosition.TOPRIGHT}
+                      />
+                    </>
+                  )}
+                </Map>
+              </div>
+
               <div className="mt-4 bg-gray-50 rounded-lg p-4">
                 <p className="text-sm text-gray-700">
                   <strong>지하철:</strong> 8호선 송파역 3번 출구 도보 5분
