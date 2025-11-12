@@ -88,7 +88,7 @@ export default function Home() {
         >
           <div className="text-center text-white px-4">
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 drop-shadow-2xl">
-              HUMANS HEALTHCARE
+              MPK BIOSOLUTION
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl mb-8 drop-shadow-lg">
               혁신적인 의료기술로 건강한 미래를 만듭니다
