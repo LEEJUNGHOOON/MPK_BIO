@@ -36,11 +36,11 @@ export default function Layout({ children }) {
       {/* 헤더 */}
       <header className="bg-white border-b border-gray-200 relative z-30">
         <div className="w-full px-4 sm:px-6 lg:px-12 xl:px-16">
-          <div className="flex items-center justify-between max-w-[1600px] mx-auto">
-            {/* 왼쪽: 로고 */}
+          <div className="flex items-center justify-between lg:justify-center max-w-[1600px] mx-auto relative">
+            {/* 왼쪽: 로고 - 데스크탑에서는 absolute로 왼쪽에 고정 */}
             <Link
               to="/"
-              className="flex items-center py-3"
+              className="flex items-center py-5 sm:py-6 lg:py-7 lg:absolute lg:left-0"
               onClick={closeMenu}
             >
               {/* 데스크탑 로고 */}
@@ -63,7 +63,7 @@ export default function Layout({ children }) {
                 <Link
                   key={item.path}
                   to={item.path}
-                  className={`text-[15px] font-medium transition-colors whitespace-nowrap ${
+                  className={`text-[15px] font-medium transition-colors whitespace-nowrap py-8 ${
                     isActive(item.path)
                       ? "text-gray-900 border-b-2 border-gray-900"
                       : "text-gray-600 hover:text-gray-900"
@@ -75,7 +75,7 @@ export default function Layout({ children }) {
             </nav>
 
             {/* 오른쪽: 언어 선택 (데스크탑) / 햄버거 메뉴 (모바일) */}
-            <div className="flex items-center">
+            <div className="flex items-center lg:absolute lg:right-0">
               {/* 언어 선택 - 데스크탑만 표시 */}
               <button className="hidden lg:flex items-center justify-center w-10 h-10 rounded-full hover:bg-gray-100 transition-colors">
                 <svg

@@ -7,10 +7,10 @@ import {
   ZoomControl,
   MapTypeControl,
 } from "react-kakao-maps-sdk";
-import slide1 from "../assets/slide/sample_images_00.png";
-import slide2 from "../assets/slide/sample_images_01.png";
-import slide3 from "../assets/slide/sample_images_02.png";
-import slide4 from "../assets/slide/sample_images_03.png";
+import slide1 from "../assets/slide/home0.jpg";
+import slide2 from "../assets/slide/home1.jpg";
+import slide3 from "../assets/slide/home2.jpg";
+import slide4 from "../assets/slide/home3.jpg";
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);

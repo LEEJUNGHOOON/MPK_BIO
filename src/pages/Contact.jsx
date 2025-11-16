@@ -1,4 +1,5 @@
 // src/pages/Contact.jsx
+import { useState, useRef } from "react";
 import {
   Map,
   MapMarker,
@@ -6,9 +7,78 @@ import {
   ZoomControl,
   MapTypeControl,
 } from "react-kakao-maps-sdk";
+import emailjs from "@emailjs/browser";
 
 export default function Contact() {
   const center = { lat: 37.3444366, lng: 127.1054167 };
+  const formRef = useRef();
+  
+  // 폼 상태 관리
+  const [formData, setFormData] = useState({
+    company_name: "",
+    user_name: "",
+    phone: "",
+    email: "",
+    inquiry_type: "",
+    message: "",
+    privacy_agreed: false,
+  });
+
+  // 전송 상태 관리
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null); // 'success' | 'error' | null
+
+  // 입력 핸들러
+  const handleChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: type === "checkbox" ? checked : value,
+    }));
+  };
+
+  // 폼 제출 핸들러
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    // 개인정보 동의 확인
+    if (!formData.privacy_agreed) {
+      alert("개인정보 수집 및 이용에 동의해주세요.");
+      return;
+    }
+
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    try {
+      // EmailJS로 이메일 전송
+      const result = await emailjs.sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        formRef.current,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      );
+
+      console.log("이메일 전송 성공:", result.text);
+      setSubmitStatus("success");
+
+      // 폼 초기화
+      setFormData({
+        company_name: "",
+        user_name: "",
+        phone: "",
+        email: "",
+        inquiry_type: "",
+        message: "",
+        privacy_agreed: false,
+      });
+    } catch (error) {
+      console.error("이메일 전송 실패:", error);
+      setSubmitStatus("error");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <div className="w-full py-20">
@@ -55,8 +125,8 @@ export default function Contact() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900">회사명</h4>
-                      <p className="text-gray-700">(주) 휴먼스헬스케어</p>
-                      <p className="text-gray-600 text-sm">HUMANS HEALTHCARE</p>
+                      <p className="text-gray-700">(주) MPK 바이오솔루션</p>
+                      <p className="text-gray-600 text-sm">MPK Biosolution</p>
                     </div>
                   </div>
 
@@ -77,7 +147,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900">대표자</h4>
-                      <p className="text-gray-700">노갑용</p>
+                      <p className="text-gray-700">문효원</p>
                     </div>
                   </div>
                 </div>
@@ -108,9 +178,9 @@ export default function Contact() {
                         전화번호
                       </h4>
                       <p className="text-lg text-gray-700 font-medium">
-                        TEL. 02-449-7401~2
+                        TEL. 031-717-9545
                       </p>
-                      <p className="text-gray-600">FAX. 02-449-7403</p>
+                      <p className="text-gray-600">FAX. 031-717-9545</p>
                     </div>
                   </div>
 
@@ -135,10 +205,10 @@ export default function Contact() {
                         이메일
                       </h4>
                       <a
-                        href="mailto:info@humanshc.co.kr"
+                        href="mailto:mhw8587@naver.com"
                         className="text-lg text-blue-600 hover:text-blue-800 font-medium"
                       >
-                        info@humanshc.co.kr
+                        mhw8587@naver.com
                       </a>
                     </div>
                   </div>
@@ -221,7 +291,60 @@ export default function Contact() {
                 담당자가 빠른 시일 내에 연락드리겠습니다.
               </p>
 
-              <form className="space-y-6">
+              {/* 성공/실패 메시지 */}
+              {submitStatus === "success" && (
+                <div className="mb-6 bg-green-50 border border-green-200 rounded-lg p-4 flex items-start gap-3">
+                  <svg
+                    className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                  <div>
+                    <h4 className="font-semibold text-green-900">
+                      문의가 성공적으로 전송되었습니다!
+                    </h4>
+                    <p className="text-sm text-green-700 mt-1">
+                      빠른 시일 내에 담당자가 연락드리겠습니다.
+                    </p>
+                  </div>
+                </div>
+              )}
+
+              {submitStatus === "error" && (
+                <div className="mb-6 bg-red-50 border border-red-200 rounded-lg p-4 flex items-start gap-3">
+                  <svg
+                    className="w-5 h-5 text-red-600 mt-0.5 flex-shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                  <div>
+                    <h4 className="font-semibold text-red-900">
+                      문의 전송에 실패했습니다
+                    </h4>
+                    <p className="text-sm text-red-700 mt-1">
+                      잠시 후 다시 시도해주시거나, 직접 연락 부탁드립니다.
+                    </p>
+                  </div>
+                </div>
+              )}
+
+              <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -229,6 +352,9 @@ export default function Contact() {
                     </label>
                     <input
                       type="text"
+                      name="company_name"
+                      value={formData.company_name}
+                      onChange={handleChange}
                       required
                       className="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       placeholder="회사명을 입력하세요"
@@ -240,6 +366,9 @@ export default function Contact() {
                     </label>
                     <input
                       type="text"
+                      name="user_name"
+                      value={formData.user_name}
+                      onChange={handleChange}
                       required
                       className="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       placeholder="담당자명을 입력하세요"
@@ -254,6 +383,9 @@ export default function Contact() {
                     </label>
                     <input
                       type="tel"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
                       required
                       className="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       placeholder="연락처를 입력하세요"
@@ -265,6 +397,9 @@ export default function Contact() {
                     </label>
                     <input
                       type="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
                       required
                       className="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       placeholder="이메일을 입력하세요"
@@ -276,13 +411,18 @@ export default function Contact() {
                   <label className="block text-sm font-medium text-gray-700 mb-2">
                     문의 유형
                   </label>
-                  <select className="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                  <select
+                    name="inquiry_type"
+                    value={formData.inquiry_type}
+                    onChange={handleChange}
+                    className="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  >
                     <option value="">문의 유형을 선택하세요</option>
-                    <option value="product">제품 문의</option>
-                    <option value="service">서비스 문의</option>
-                    <option value="partnership">파트너십 문의</option>
-                    <option value="support">기술 지원</option>
-                    <option value="other">기타</option>
+                    <option value="제품 문의">제품 문의</option>
+                    <option value="서비스 문의">서비스 문의</option>
+                    <option value="파트너십 문의">파트너십 문의</option>
+                    <option value="기술 지원">기술 지원</option>
+                    <option value="기타">기타</option>
                   </select>
                 </div>
 
@@ -291,6 +431,9 @@ export default function Contact() {
                     문의내용 <span className="text-red-500">*</span>
                   </label>
                   <textarea
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
                     rows="6"
                     required
                     className="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -299,7 +442,14 @@ export default function Contact() {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <input type="checkbox" id="privacy" className="mt-1" />
+                  <input
+                    type="checkbox"
+                    id="privacy"
+                    name="privacy_agreed"
+                    checked={formData.privacy_agreed}
+                    onChange={handleChange}
+                    className="mt-1"
+                  />
                   <label htmlFor="privacy" className="text-sm text-gray-600">
                     개인정보 수집 및 이용에 동의합니다.
                     <span className="text-blue-600 underline cursor-pointer ml-1">
@@ -310,9 +460,39 @@ export default function Contact() {
 
                 <button
                   type="submit"
-                  className="w-full bg-blue-700 hover:bg-blue-800 text-white rounded-lg py-4 text-sm font-semibold transition-colors shadow-lg"
+                  disabled={isSubmitting}
+                  className={`w-full rounded-lg py-4 text-sm font-semibold transition-all shadow-lg ${
+                    isSubmitting
+                      ? "bg-gray-400 cursor-not-allowed"
+                      : "bg-blue-700 hover:bg-blue-800 text-white"
+                  }`}
                 >
-                  문의 보내기
+                  {isSubmitting ? (
+                    <span className="flex items-center justify-center gap-2">
+                      <svg
+                        className="animate-spin h-5 w-5"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                      >
+                        <circle
+                          className="opacity-25"
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="currentColor"
+                          strokeWidth="4"
+                        />
+                        <path
+                          className="opacity-75"
+                          fill="currentColor"
+                          d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                        />
+                      </svg>
+                      전송 중...
+                    </span>
+                  ) : (
+                    "문의 보내기"
+                  )}
                 </button>
               </form>
             </div>
