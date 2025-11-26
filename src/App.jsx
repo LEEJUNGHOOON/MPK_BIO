@@ -8,8 +8,6 @@ import Products from "./pages/Products";
 import Contact from "./pages/Contact";
 
 export default function App() {
-  // 카카오맵 API 키 로드 확인
-  console.log("Kakao Map Key:", import.meta.env.VITE_KAKAOMAP_KEY);
 
   return (
     <Router>

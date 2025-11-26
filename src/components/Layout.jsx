@@ -40,7 +40,7 @@ export default function Layout({ children }) {
             {/* 왼쪽: 로고 - 데스크탑에서는 absolute로 왼쪽에 고정 */}
             <Link
               to="/"
-              className="flex items-center py-5 sm:py-6 lg:py-7 lg:absolute lg:left-0"
+              className="flex items-center py-3 lg:absolute lg:left-0"
               onClick={closeMenu}
             >
               {/* 데스크탑 로고 */}
@@ -63,7 +63,7 @@ export default function Layout({ children }) {
                 <Link
                   key={item.path}
                   to={item.path}
-                  className={`text-[15px] font-medium transition-colors whitespace-nowrap py-8 ${
+                  className={`text-[15px] font-medium transition-colors whitespace-nowrap py-6 ${
                     isActive(item.path)
                       ? "text-gray-900 border-b-2 border-gray-900"
                       : "text-gray-600 hover:text-gray-900"
@@ -110,7 +110,11 @@ export default function Layout({ children }) {
       </header>
 
       {/* 슬라이드 메뉴 (모바일용) */}
-      <SlideMenu isOpen={isMenuOpen} onClose={closeMenu} menuItems={menuItems} />
+      <SlideMenu
+        isOpen={isMenuOpen}
+        onClose={closeMenu}
+        menuItems={menuItems}
+      />
 
       {/* 메인 컨텐츠 */}
       <main className="w-full">{children}</main>
