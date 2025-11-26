@@ -35,35 +35,35 @@ export default function Layout({ children }) {
     <div className="min-h-screen bg-white">
       {/* 헤더 */}
       <header className="bg-white border-b border-gray-200 relative z-30">
-        <div className="w-full px-4 sm:px-6 lg:px-12 xl:px-16">
-          <div className="flex items-center justify-between lg:justify-center max-w-[1600px] mx-auto relative">
-            {/* 왼쪽: 로고 - 데스크탑에서는 absolute로 왼쪽에 고정 */}
+        <div className="w-full max-w-[1600px] mx-auto px-4 lg:px-12">
+          <div className="flex items-center justify-between lg:justify-center relative">
+            {/* 왼쪽: 로고 - 데스크탑에서는 왼쪽에 배치 */}
             <Link
               to="/"
-              className="flex items-center py-3 lg:absolute lg:left-0"
+              className="flex items-center py-3 lg:mr-auto"
               onClick={closeMenu}
             >
               {/* 데스크탑 로고 */}
               <img
                 src={logoImageDesktop}
                 alt="SK BIOFARM"
-                className="hidden lg:block h-16 xl:h-20 w-auto"
+                className="hidden lg:block h-16 w-auto"
               />
               {/* 모바일 로고 */}
               <img
                 src={logoImageMobile}
                 alt="SK BIOFARM"
-                className="lg:hidden h-12 sm:h-14 w-auto"
+                className="lg:hidden h-12 w-auto"
               />
             </Link>
 
             {/* 데스크탑 메뉴 - 중앙 */}
-            <nav className="hidden lg:flex items-center gap-8 xl:gap-10">
+            <nav className="hidden lg:flex items-center gap-16">
               {menuItems.map((item) => (
                 <Link
                   key={item.path}
                   to={item.path}
-                  className={`text-[15px] font-medium transition-colors whitespace-nowrap py-6 ${
+                  className={`text-[16px] font-medium transition-colors whitespace-nowrap py-6 ${
                     isActive(item.path)
                       ? "text-gray-900 border-b-2 border-gray-900"
                       : "text-gray-600 hover:text-gray-900"
@@ -75,7 +75,7 @@ export default function Layout({ children }) {
             </nav>
 
             {/* 오른쪽: 언어 선택 (데스크탑) / 햄버거 메뉴 (모바일) */}
-            <div className="flex items-center lg:absolute lg:right-0">
+            <div className="flex items-center lg:ml-auto">
               {/* 언어 선택 - 데스크탑만 표시 */}
               <button className="hidden lg:flex items-center justify-center w-10 h-10 rounded-full hover:bg-gray-100 transition-colors">
                 <svg
@@ -95,7 +95,7 @@ export default function Layout({ children }) {
               {/* 햄버거 메뉴 버튼 - 모바일만 표시 */}
               <button
                 onClick={toggleMenu}
-                className="lg:hidden flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 focus:outline-none transition-transform hover:scale-110"
+                className="lg:hidden flex items-center justify-center w-10 h-10 focus:outline-none transition-transform hover:scale-110"
                 aria-label="메뉴 열기"
               >
                 <img
