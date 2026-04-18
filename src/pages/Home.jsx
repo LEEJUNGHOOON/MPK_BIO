@@ -121,11 +121,11 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              휴먼스헬스케어와 함께하세요
+              MPK바이오솔루션와 함께하세요
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              최첨단 의료기기와 혁신적인 헬스케어 솔루션으로 더 나은 의료
-              서비스를 제공합니다.
+              최첨단 의료기기와 혁신적인 바이오 솔루션으로 더 나은 의료 서비스를
+              제공합니다.
             </p>
           </div>
 

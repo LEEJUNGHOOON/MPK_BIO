@@ -12,7 +12,7 @@ import emailjs from "@emailjs/browser";
 export default function Contact() {
   const center = { lat: 37.3444366, lng: 127.1054167 };
   const formRef = useRef();
-  
+
   // 폼 상태 관리
   const [formData, setFormData] = useState({
     company_name: "",
@@ -56,7 +56,7 @@ export default function Contact() {
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         formRef.current,
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
       );
 
       console.log("이메일 전송 성공:", result.text);
@@ -89,7 +89,7 @@ export default function Contact() {
             오시는길
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            휴먼스헬스케어에 대한 문의사항이 있으시면 언제든지 연락해 주시기
+            MPK바이오솔루션에 대한 문의사항이 있으시면 언제든지 연락해 주시기
             바랍니다. 전문 상담팀이 친절하게 안내해드리겠습니다.
           </p>
         </div>
