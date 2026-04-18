@@ -2,24 +2,24 @@
 
 // Collagen 이미지
 import ateloQImg from "../assets/Products/Collagen/ATELO Q.png";
-import teragenImg from "../assets/Products/Collagen/TERAGEN.jpeg";
+import teragenImg from "../assets/Products/Collagen/TERAGEN.png";
 
 // Hemostatic 이미지
 import boneStateImg from "../assets/Products/Hemostatic/BONE-STATE.jpg";
 import hemofixImg from "../assets/Products/Hemostatic/Hemofix.jpeg";
-import novacolImg from "../assets/Products/Hemostatic/Novacol.jpg";
+import novacolImg from "../assets/Products/Hemostatic/Novacol.png";
 
 // POA 이미지
-import inotissImg from "../assets/Products/POA/Inotiss.jpeg";
+import inotissImg from "../assets/Products/POA/INOTISS.png";
 import medicloreImg from "../assets/Products/POA/MEDICLORE.jpeg";
 import precoatImg from "../assets/Products/POA/Precoat.png";
 
 // Skin Closure 이미지
 import bifixImg from "../assets/Products/Skin Closure/BI-FIX.jpg";
-import episealImg from "../assets/Products/Skin Closure/EPI-SEAL.jpg";
+import episealImg from "../assets/Products/Skin Closure/EPI-SEAL.png";
 import exofinImg from "../assets/Products/Skin Closure/EXOFIN.jpeg";
 import exofinFusionImg from "../assets/Products/Skin Closure/Exofin Fusion.jpeg";
-import surgiSkincloImg from "../assets/Products/Skin Closure/SURGI SKINCLO.jpg";
+import surgiSkincloImg from "../assets/Products/Skin Closure/SURGI SKINCLO.jpeg";
 
 export const categories = [
   { id: "all", name: "전체", nameEn: "All Products" },
@@ -37,7 +37,8 @@ export const products = [
     name: "ATELO Q",
     nameKo: "아텔로큐",
     image: ateloQImg,
-    description: "정맥에 바늘 또는 카테터를 삽입하여 용기에 있는 양액을 주입하는 기구",
+    description:
+      "정맥에 바늘 또는 카테터를 삽입하여 용기에 있는 양액을 주입하는 기구",
     features: [
       "고순도 콜라겐 사용",
       "생체 적합성 우수",
@@ -156,12 +157,7 @@ export const products = [
     nameKo: "바이픽스",
     image: bifixImg,
     description: "피부 절개 부위를 안전하게 접합하는 의료용 접착제",
-    features: [
-      "강력한 접착력",
-      "빠른 경화 시간",
-      "흉터 최소화",
-      "간편한 사용",
-    ],
+    features: ["강력한 접착력", "빠른 경화 시간", "흉터 최소화", "간편한 사용"],
   },
   {
     id: 10,
@@ -170,12 +166,7 @@ export const products = [
     nameKo: "에피실",
     image: episealImg,
     description: "피부 표면을 효과적으로 봉합하는 실링 제품",
-    features: [
-      "방수 기능",
-      "유연한 막 형성",
-      "감염 예방",
-      "자연 박리",
-    ],
+    features: ["방수 기능", "유연한 막 형성", "감염 예방", "자연 박리"],
   },
   {
     id: 11,
@@ -184,12 +175,7 @@ export const products = [
     nameKo: "엑소핀",
     image: exofinImg,
     description: "외과 수술 후 피부 접합을 위한 고급 솔루션",
-    features: [
-      "정밀한 접합",
-      "최소 흉터",
-      "신속한 치유",
-      "환자 만족도 높음",
-    ],
+    features: ["정밀한 접합", "최소 흉터", "신속한 치유", "환자 만족도 높음"],
   },
   {
     id: 12,
@@ -198,12 +184,7 @@ export const products = [
     nameKo: "엑소핀 퓨전",
     image: exofinFusionImg,
     description: "차세대 피부 접합 기술이 적용된 프리미엄 제품",
-    features: [
-      "혁신적인 포뮬러",
-      "우수한 접착력",
-      "피부 친화적",
-      "빠른 회복",
-    ],
+    features: ["혁신적인 포뮬러", "우수한 접착력", "피부 친화적", "빠른 회복"],
   },
   {
     id: 13,
@@ -212,11 +193,6 @@ export const products = [
     nameKo: "써지 스킨클로",
     image: surgiSkincloImg,
     description: "수술 부위 피부를 감싸고 보호하는 피부 접합 시스템",
-    features: [
-      "포괄적 보호",
-      "감염 차단",
-      "편안한 착용감",
-      "효과적인 치유",
-    ],
+    features: ["포괄적 보호", "감염 차단", "편안한 착용감", "효과적인 치유"],
   },
 ];
