@@ -11,7 +11,8 @@ export default function About() {
             회사소개
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            MPK BioSolution은 혁신적인 바이오 솔루션으로 건강한 미래를 만들어갑니다.
+            MPK BioSolution은 혁신적인 바이오 솔루션으로 건강한 미래를
+            만들어갑니다.
           </p>
         </div>
 
@@ -47,7 +48,8 @@ export default function About() {
               A Global leader in healthcare industry
             </h3>
             <p className="text-gray-600 leading-relaxed">
-              ▶To provide the most beneficial devices and services leading the field of pharmaceuticals.
+              ▶To provide the most beneficial devices and services leading the
+              field of pharmaceuticals.
             </p>
           </div>
 
@@ -109,8 +111,12 @@ export default function About() {
                   {/* 2004 */}
                   <div className="relative flex items-center">
                     <div className="w-1/2 pr-8 text-right">
-                      <div className="text-2xl font-bold text-blue-600">2004</div>
-                      <p className="text-sm text-gray-600 mt-1">08. 금성산사 설립</p>
+                      <div className="text-2xl font-bold text-blue-600">
+                        2004
+                      </div>
+                      <p className="text-sm text-gray-600 mt-1">
+                        08. 금성산사 설립
+                      </p>
                     </div>
                     <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full bg-blue-600 border-4 border-white shadow"></div>
                     <div className="w-1/2 pl-8"></div>
@@ -121,9 +127,12 @@ export default function About() {
                     <div className="w-1/2 pr-8"></div>
                     <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full bg-blue-600 border-4 border-white shadow"></div>
                     <div className="w-1/2 pl-8">
-                      <div className="text-2xl font-bold text-blue-600">2012</div>
+                      <div className="text-2xl font-bold text-blue-600">
+                        2012
+                      </div>
                       <p className="text-sm text-gray-600 mt-1">
-                        09. (주)금성산사(주) 설립<br />
+                        09. (주)금성산사(주) 설립
+                        <br />
                         09. 식의약시 인증취득
                       </p>
                     </div>
@@ -132,7 +141,9 @@ export default function About() {
                   {/* 2013 */}
                   <div className="relative flex items-center">
                     <div className="w-1/2 pr-8 text-right">
-                      <div className="text-2xl font-bold text-blue-600">2013</div>
+                      <div className="text-2xl font-bold text-blue-600">
+                        2013
+                      </div>
                       <p className="text-sm text-gray-600 mt-1">
                         01. 비과,구강호흡계 상사권 변경등록
                       </p>
@@ -146,7 +157,9 @@ export default function About() {
                     <div className="w-1/2 pr-8"></div>
                     <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full bg-blue-600 border-4 border-white shadow"></div>
                     <div className="w-1/2 pl-8">
-                      <div className="text-2xl font-bold text-blue-600">2014</div>
+                      <div className="text-2xl font-bold text-blue-600">
+                        2014
+                      </div>
                       <p className="text-sm text-gray-600 mt-1">
                         09. 생산판매업허가 획득
                       </p>
@@ -156,8 +169,12 @@ export default function About() {
                   {/* 2015 */}
                   <div className="relative flex items-center">
                     <div className="w-1/2 pr-8 text-right">
-                      <div className="text-2xl font-bold text-blue-600">2015</div>
-                      <p className="text-sm text-gray-600 mt-1">03. 비과 일반의 등록</p>
+                      <div className="text-2xl font-bold text-blue-600">
+                        2015
+                      </div>
+                      <p className="text-sm text-gray-600 mt-1">
+                        03. 비과 일반의 등록
+                      </p>
                     </div>
                     <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full bg-blue-600 border-4 border-white shadow"></div>
                     <div className="w-1/2 pl-8"></div>
@@ -168,7 +185,9 @@ export default function About() {
                     <div className="w-1/2 pr-8"></div>
                     <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full bg-blue-600 border-4 border-white shadow"></div>
                     <div className="w-1/2 pl-8">
-                      <div className="text-2xl font-bold text-blue-600">2016</div>
+                      <div className="text-2xl font-bold text-blue-600">
+                        2016
+                      </div>
                       <p className="text-sm text-gray-600 mt-1">
                         06. 로즈, 라운즈 판매허
                       </p>
@@ -178,8 +197,12 @@ export default function About() {
                   {/* 2018 */}
                   <div className="relative flex items-center">
                     <div className="w-1/2 pr-8 text-right">
-                      <div className="text-2xl font-bold text-blue-600">2018</div>
-                      <p className="text-sm text-gray-600 mt-1">12. 유승사현 등록</p>
+                      <div className="text-2xl font-bold text-blue-600">
+                        2018
+                      </div>
+                      <p className="text-sm text-gray-600 mt-1">
+                        12. 유승사현 등록
+                      </p>
                     </div>
                     <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full bg-blue-600 border-4 border-white shadow"></div>
                     <div className="w-1/2 pl-8"></div>
@@ -190,9 +213,12 @@ export default function About() {
                     <div className="w-1/2 pr-8"></div>
                     <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full bg-blue-600 border-4 border-white shadow"></div>
                     <div className="w-1/2 pl-8">
-                      <div className="text-2xl font-bold text-blue-600">2020</div>
+                      <div className="text-2xl font-bold text-blue-600">
+                        2020
+                      </div>
                       <p className="text-sm text-gray-600 mt-1">
-                        07. 성남도수 공립산업단지 등록 (1개월변경상물소대상)<br />
+                        07. 성남도수 공립산업단지 등록 (1개월변경상물소대상)
+                        <br />
                         08. 제주도 일상상 등록
                       </p>
                     </div>
@@ -208,81 +234,141 @@ export default function About() {
           <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">
             거래처 현황
           </h2>
-          <div className="bg-white rounded-2xl p-4 md:p-8 shadow-lg">
+          <div className="bg-white rounded-2xl p-4 md:p-8 shadow-lg overflow-hidden">
             <div className="relative w-full" style={{ paddingBottom: "80%" }}>
-              {/* 지도 이미지 */}
               <img
                 src={koreaMapImg}
                 alt="Korea Map"
                 className="absolute inset-0 w-full h-full object-contain"
               />
-
-              {/* SVG 오버레이 - 선과 점 */}
-              <svg className="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 800 1100" preserveAspectRatio="xMidYMid meet">
-                {/* 인천 점과 선 */}
-                <circle cx="205" cy="245" r="6" fill="#3b82f6" stroke="white" strokeWidth="2"/>
-                <line x1="205" y1="245" x2="100" y2="450" stroke="#3b82f6" strokeWidth="1.5"/>
-                
-                {/* 서울 점과 선 */}
-                <circle cx="260" cy="220" r="6" fill="#3b82f6" stroke="white" strokeWidth="2"/>
-                <line x1="260" y1="220" x2="100" y2="150" stroke="#3b82f6" strokeWidth="1.5"/>
-                
-                {/* 경기 점과 선 */}
-                <circle cx="330" cy="310" r="6" fill="#3b82f6" stroke="white" strokeWidth="2"/>
-                <line x1="330" y1="310" x2="620" y2="240" stroke="#3b82f6" strokeWidth="1.5"/>
+              <svg
+                className="absolute inset-0 w-full h-full pointer-events-none"
+                viewBox="0 0 800 1100"
+                preserveAspectRatio="xMidYMid meet"
+              >
+                <circle
+                  cx="225"
+                  cy="245"
+                  r="6"
+                  fill="#3b82f6"
+                  stroke="white"
+                  strokeWidth="2"
+                />
+                <line
+                  x1="225"
+                  y1="245"
+                  x2="0"
+                  y2="430"
+                  stroke="#3b82f6"
+                  strokeWidth="1.5"
+                />
+                <circle
+                  cx="260"
+                  cy="230"
+                  r="6"
+                  fill="#3b82f6"
+                  stroke="white"
+                  strokeWidth="2"
+                />
+                <line
+                  x1="260"
+                  y1="230"
+                  x2="120"
+                  y2="150"
+                  stroke="#3b82f6"
+                  strokeWidth="1.5"
+                />
+                <circle
+                  cx="330"
+                  cy="310"
+                  r="6"
+                  fill="#3b82f6"
+                  stroke="white"
+                  strokeWidth="2"
+                />
+                <line
+                  x1="330"
+                  y1="310"
+                  x2="650"
+                  y2="240"
+                  stroke="#3b82f6"
+                  strokeWidth="1.5"
+                />
               </svg>
-
-              {/* Seoul 라벨 - 모바일에서는 왼쪽 상단, 태블릿 이상에서는 기존 위치 */}
-              <div className="absolute top-[8%] left-[2%] w-[24%] sm:w-[26%] md:w-[22%]">
-                <div className="bg-blue-500 text-white px-2 py-1 rounded font-bold text-[10px] sm:text-xs md:text-sm lg:text-base shadow-lg whitespace-nowrap">
+              <div className="absolute top-[8%] left-[2%]">
+                <div className="bg-blue-500 text-white px-1 py-0.5 md:px-2 md:py-1 rounded font-bold text-[8px] sm:text-[10px] md:text-sm lg:text-base shadow-lg whitespace-nowrap">
                   Seoul
                 </div>
-                <div className="mt-1 space-y-1 md:space-y-1.5 text-[8px] sm:text-[10px] md:text-xs lg:text-sm leading-relaxed">
-                  <p className="text-gray-900 border-b border-red-400 pb-1">■ Samsung Medical Center</p>
-                  <p className="text-gray-900 border-b border-red-400 pb-1">■ Seoul National University Hospital</p>
-                  <p className="text-gray-900 border-b border-red-400 pb-1">■ Chung-Ang University Hospital</p>
-                  <p className="text-gray-900 border-b border-red-400 pb-1">■ Ewha Womans University Mokdong Hospital</p>
-                  <p className="text-gray-900 border-b border-red-400 pb-1">■ Hanyang University Hospital</p>
+                <div className="mt-0.5 md:mt-1 space-y-0.5 md:space-y-1.5 text-[6px] sm:text-[8px] md:text-xs lg:text-sm leading-relaxed">
+                  <p className="text-gray-900 border-b border-gray-400 pb-0.5 md:pb-1 whitespace-nowrap">
+                    ■ Samsung Medical Center
+                  </p>
+                  <p className="text-gray-900 border-b border-gray-400 pb-0.5 md:pb-1 whitespace-nowrap">
+                    ■ Seoul National University Hospital
+                  </p>
+                  <p className="text-gray-900 border-b border-gray-400 pb-0.5 md:pb-1 whitespace-nowrap">
+                    ■ Chung-Ang University Hospital
+                  </p>
+                  <p className="text-gray-900 border-b border-gray-400 pb-0.5 md:pb-1 whitespace-nowrap">
+                    ■ Ewha Womans University Mokdong Hospital
+                  </p>
+                  <p className="text-gray-900 border-b border-gray-400 pb-0.5 md:pb-1 whitespace-nowrap">
+                    ■ Hanyang University Hospital
+                  </p>
                 </div>
               </div>
-
-              {/* Gyeonggi-do 라벨 */}
-              <div className="absolute top-[15%] right-[2%] w-[32%] sm:w-[34%] md:w-[30%]">
-                <div className="bg-blue-500 text-white px-2 py-1 rounded font-bold text-[10px] sm:text-xs md:text-sm lg:text-base shadow-lg whitespace-nowrap">
+              <div className="absolute top-[15%] right-[2%]">
+                <div className="bg-blue-500 text-white px-1 py-0.5 md:px-2 md:py-1 rounded font-bold text-[8px] sm:text-[10px] md:text-sm lg:text-base shadow-lg whitespace-nowrap">
                   Gyeonggi-do
                 </div>
-                <div className="mt-1 space-y-2 md:space-y-2.5 text-[8px] sm:text-[10px] md:text-xs lg:text-sm leading-relaxed">
+                <div className="mt-0.5 md:mt-1 space-y-1 md:space-y-2.5 text-[6px] sm:text-[8px] md:text-xs lg:text-sm leading-relaxed">
                   <div>
-                    <p className="font-bold text-gray-900 underline mb-1">Seongnam</p>
-                    <p className="text-gray-900 border-b border-red-400 pb-1">■ Seoul National University Bundang Hospital</p>
-                    <p className="text-gray-900 border-b border-red-400 pb-1">■ Bundang Jesaeng Hospital</p>
-                    <p className="text-gray-900 border-b border-red-400 pb-1">■ Bundang Cha Hospital</p>
+                    <p className="font-bold text-gray-900 underline mb-0.5 md:mb-1 whitespace-nowrap">
+                      Seongnam
+                    </p>
+                    <p className="text-gray-900 border-b border-gray-400 pb-0.5 md:pb-1 whitespace-nowrap">
+                      ■ Seoul National University Bundang Hospital
+                    </p>
+                    <p className="text-gray-900 border-b border-gray-400 pb-0.5 md:pb-1 whitespace-nowrap">
+                      ■ Bundang Jesaeng Hospital
+                    </p>
+                    <p className="text-gray-900 border-b border-gray-400 pb-0.5 md:pb-1 whitespace-nowrap">
+                      ■ Bundang Cha Hospital
+                    </p>
                   </div>
                   <div>
-                    <p className="font-bold text-gray-900 underline mb-1">Guri</p>
-                    <p className="text-gray-900 border-b border-red-400 pb-1">■ Guri Hanyang University Hospital</p>
+                    <p className="font-bold text-gray-900 underline mb-0.5 md:mb-1 whitespace-nowrap">
+                      Guri
+                    </p>
+                    <p className="text-gray-900 border-b border-gray-400 pb-0.5 md:pb-1 whitespace-nowrap">
+                      ■ Guri Hanyang University Hospital
+                    </p>
                   </div>
                   <div>
-                    <p className="font-bold text-gray-900 underline mb-1">Bucheon</p>
-                    <p className="text-gray-900 border-b border-red-400 pb-1">■ Bucheon Sejong Hospital</p>
+                    <p className="font-bold text-gray-900 underline mb-0.5 md:mb-1 whitespace-nowrap">
+                      Bucheon
+                    </p>
+                    <p className="text-gray-900 border-b border-gray-400 pb-0.5 md:pb-1 whitespace-nowrap">
+                      ■ Bucheon Sejong Hospital
+                    </p>
                   </div>
                 </div>
               </div>
-
-              {/* Incheon 라벨 - 모바일에서 Seoul과 겹치지 않도록 아래로 이동 */}
-              <div className="absolute top-[48%] sm:top-[42%] md:top-[38%] left-[2%] w-[24%] sm:w-[26%] md:w-[22%]">
-                <div className="bg-blue-500 text-white px-2 py-1 rounded font-bold text-[10px] sm:text-xs md:text-sm lg:text-base shadow-lg whitespace-nowrap">
+              <div className="absolute top-[48%] sm:top-[42%] md:top-[38%] left-[2%]">
+                <div className="bg-blue-500 text-white px-1 py-0.5 md:px-2 md:py-1 rounded font-bold text-[8px] sm:text-[10px] md:text-sm lg:text-base shadow-lg whitespace-nowrap">
                   Incheon
                 </div>
-                <div className="mt-1 space-y-1 md:space-y-1.5 text-[8px] sm:text-[10px] md:text-xs lg:text-sm leading-relaxed">
-                  <p className="text-gray-900 border-b border-red-400 pb-1">■ Gil Medical Center</p>
-                  <p className="text-gray-900 border-b border-red-400 pb-1">■ Mediplex Sejong Hospital</p>
+                <div className="mt-0.5 md:mt-1 space-y-0.5 md:space-y-1.5 text-[6px] sm:text-[8px] md:text-xs lg:text-sm leading-relaxed">
+                  <p className="text-gray-900 border-b border-gray-400 pb-0.5 md:pb-1 whitespace-nowrap">
+                    ■ Gil Medical Center
+                  </p>
+                  <p className="text-gray-900 border-b border-gray-400 pb-0.5 md:pb-1 whitespace-nowrap">
+                    ■ Mediplex Sejong Hospital
+                  </p>
                 </div>
               </div>
-
-              {/* Over 30 Semi-hospitals */}
               <div className="absolute bottom-[8%] right-[6%]">
-                <p className="text-gray-900 font-semibold text-[9px] sm:text-[11px] md:text-xs lg:text-sm bg-white bg-opacity-90 px-2 py-1 rounded shadow whitespace-nowrap">
+                <p className="text-gray-900 font-semibold text-[6px] sm:text-[9px] md:text-xs lg:text-sm bg-white bg-opacity-90 px-1 py-0.5 md:px-2 md:py-1 rounded shadow whitespace-nowrap">
                   ■ Over 30 Semi-hospitals
                 </p>
               </div>

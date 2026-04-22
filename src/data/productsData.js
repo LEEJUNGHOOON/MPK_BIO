@@ -17,7 +17,7 @@ import precoatImg from "../assets/Products/POA/Precoat.png";
 // Skin Closure 이미지
 import bifixImg from "../assets/Products/Skin Closure/BI-FIX.jpg";
 import episealImg from "../assets/Products/Skin Closure/EPI-SEAL.png";
-import exofinImg from "../assets/Products/Skin Closure/EXOFIN.jpeg";
+import exofinImg from "../assets/Products/Skin Closure/EXOFIN.png";
 import exofinFusionImg from "../assets/Products/Skin Closure/Exofin Fusion.jpeg";
 import surgiSkincloImg from "../assets/Products/Skin Closure/SURGI SKINCLO.jpeg";
 

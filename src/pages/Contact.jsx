@@ -89,7 +89,7 @@ export default function Contact() {
             오시는길
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            MPK바이오솔루션에 대한 문의사항이 있으시면 언제든지 연락해 주시기
+            MPK 바이오솔루션에 대한 문의사항이 있으시면 언제든지 연락해 주시기
             바랍니다. 전문 상담팀이 친절하게 안내해드리겠습니다.
           </p>
         </div>
