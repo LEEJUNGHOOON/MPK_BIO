@@ -6,7 +6,7 @@ import teragenImg from "../assets/Products/Collagen/TERAGEN.png";
 
 // Hemostatic 이미지
 import boneStateImg from "../assets/Products/Hemostatic/BONE-STATE.jpg";
-import hemofixImg from "../assets/Products/Hemostatic/Hemofix.jpeg";
+import hemofixImg from "../assets/Products/Hemostatic/HEMOFIX.png";
 import novacolImg from "../assets/Products/Hemostatic/Novacol.png";
 
 // POA 이미지
@@ -18,7 +18,7 @@ import precoatImg from "../assets/Products/POA/Precoat.png";
 import bifixImg from "../assets/Products/Skin Closure/BI-FIX.jpg";
 import episealImg from "../assets/Products/Skin Closure/EPI-SEAL.png";
 import exofinImg from "../assets/Products/Skin Closure/EXOFIN.png";
-import exofinFusionImg from "../assets/Products/Skin Closure/Exofin Fusion.jpeg";
+import exofinFusionImg from "../assets/Products/Skin Closure/EXOFINFUSION.png";
 import surgiSkincloImg from "../assets/Products/Skin Closure/SURGI SKINCLO.jpeg";
 
 export const categories = [
