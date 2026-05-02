@@ -15,11 +15,11 @@ import medicloreImg from "../assets/Products/POA/MEDICLORE.jpeg";
 import precoatImg from "../assets/Products/POA/Precoat.png";
 
 // Skin Closure 이미지
-import bifixImg from "../assets/Products/Skin Closure/BI-FIX.jpg";
+import bifixImg from "../assets/Products/Skin Closure/BI-FIX.jpeg";
 import episealImg from "../assets/Products/Skin Closure/EPI-SEAL.png";
 import exofinImg from "../assets/Products/Skin Closure/EXOFIN.png";
 import exofinFusionImg from "../assets/Products/Skin Closure/EXOFINFUSION.png";
-import surgiSkincloImg from "../assets/Products/Skin Closure/SURGI SKINCLO.jpeg";
+// import surgiSkincloImg from "../assets/Products/Skin Closure/SURGI SKINCLO.jpeg";
 
 export const categories = [
   { id: "all", name: "전체", nameEn: "All Products" },
@@ -186,13 +186,14 @@ export const products = [
     description: "차세대 피부 접합 기술이 적용된 프리미엄 제품",
     features: ["혁신적인 포뮬러", "우수한 접착력", "피부 친화적", "빠른 회복"],
   },
-  {
-    id: 13,
-    category: "skinClosure",
-    name: "SURGI SKINCLO",
-    nameKo: "써지 스킨클로",
-    image: surgiSkincloImg,
-    description: "수술 부위 피부를 감싸고 보호하는 피부 접합 시스템",
-    features: ["포괄적 보호", "감염 차단", "편안한 착용감", "효과적인 치유"],
-  },
+  // },
+  // {
+  //   id: 13,
+  //   category: "skinClosure",
+  //   name: "SURGI SKINCLO",
+  //   nameKo: "써지 스킨클로",
+  //   image: surgiSkincloImg,
+  //   description: "수술 부위 피부를 감싸고 보호하는 피부 접합 시스템",
+  //   features: ["포괄적 보호", "감염 차단", "편안한 착용감", "효과적인 치유"],
+  // },
 ];
